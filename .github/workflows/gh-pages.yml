@@ -30,6 +30,8 @@ jobs:
         uses: conda-incubator/setup-miniconda@v2
         with:
           miniconda-version: "latest"
+          auto-activate-base: true
+          activate-environment: ""
           environment-file: environment.yaml
 
       # 2. Partie spécifique à Sphinx (installation des
@@ -52,4 +54,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages     # <- Branche sur laquelle seront commités les fichiers
-          FOLDER: build/html/  # <- Dossier contenant notre documentation générée
+          FOLDER: ../docsource/_build/html/  # <- Dossier contenant notre documentation générée
