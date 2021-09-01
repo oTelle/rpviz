@@ -54,4 +54,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages     # <- Branche sur laquelle seront commités les fichiers
-          FOLDER: ../docsource/_build/html/  # <- Dossier contenant notre documentation générée
+          FOLDER: docsource/_build/html/  # <- Dossier contenant notre documentation générée
